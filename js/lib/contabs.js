@@ -35,14 +35,14 @@ Contabs.prototype = {
 
 
                 html += '<i class="fa  fa-fw ' + tmenu.cssClass + '"></i><span class="nav-label">' + tmenu.name + '</span>';
-                if (tmenu.items != undefined) {
+                if (tmenu.items != undefined && tmenu.items.length != 0) {
                     html += '<i class="fa fa-angle-left arrow"></i>';
                 } else {
                     //无二级菜单
                     html += '';
                 }
                 html += '</a>';
-                if (tmenu.items != undefined) {
+                if (tmenu.items != undefined && tmenu.items.length != 0) {
                     html += '<ul class="nav nav-second-level">';
 
                     for (var x = 0; x < tmenu.items.length; x++) {
