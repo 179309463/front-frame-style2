@@ -82,6 +82,11 @@ Contabs.prototype = {
         $(".J_tabCloseAll").on("click", contabs.tabCloseAll);
     },
 
+    //刷新菜单
+    refreshMenu:function(menus){
+        $('.js-navbar-side').empty();
+        this.Menu(menus);
+    },
 
     //OuterWidth(l):返回所有匹配元素外部宽度和（默认包括补白和边框）。
     OuterWidth: function(l) {

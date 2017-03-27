@@ -60,6 +60,12 @@ $(function () {
 
     // 加载菜单
     contabs.Menu(visualMuneJson);
+
+
+    /*刷新菜单测试*/
+    $(".js-refresh").click(function(){
+        contabs.refreshMenu(visualMuneJson2);
+    });
 });
 
 function initMenu() {
@@ -231,7 +237,45 @@ var visualMuneJson = [{
     }
 ];
 
-/**
+//刷新后的菜单json
+var visualMuneJson2 = [{
+    "name": "公共信息",
+    "cssClass": "fa-server",
+    "items": [{
+        "name": "国家列表",
+        "cssClass": "fa-home",
+        //"state": "active",//当前活跃
+        "url": "../page/baseInfo/countryTable.html"
+
+    }, {
+        "name": "表单编辑模板",
+        "cssClass": "fa-bar-chart",
+        "url": "../page/baseInfo/from.html",
+    }, {
+        "name": "建筑",
+        "cssClass": "fa-building-o",
+        "items": [{
+            "name": "建筑地理分布",
+            "url": contextPath + "/web/report/build.do?action=buildMapCountry"
+        }, {
+            "name": "品牌统计",
+            "url": contextPath + "/web/report/poi.do?action=brandTreemap"
+        }, {
+            "name": "学区房",
+            "url": contextPath + "/page/building/schoolRoomMap.html"
+        }, {
+            "name": "地铁房",
+            "url": contextPath + "/page/building/subwayRoomMap.html"
+        }, {
+            "name": "酒店分布",
+            "url": contextPath + "/web/report/build.do?action=hotelDistribution"
+        }, {
+            "name": "公交线路图",
+            "url": contextPath + "/page/building/busRouteMap.html"
+        }]
+    }]
+}]
+        /**
  * 退出登录
  */
 function logout() {
