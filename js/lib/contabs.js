@@ -213,6 +213,13 @@ Contabs.prototype = {
                         }
                     });
                 }
+
+                //点击左边菜单，刷新对应框架功能
+                var thisframe = $('.J_iframe[data-id="'+o+'"]')[0];
+                console.log(thisframe);
+                thisframe.src = o;
+
+
                 k = false;
                 return false;
             }
